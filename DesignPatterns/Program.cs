@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.AbstractFactoryPattern;
 using DesignPatterns.BuilderPattern;
+using DesignPatterns.DependencyInjectionPattern;
 using DesignPatterns.Factory;
 using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
@@ -53,6 +54,13 @@ namespace DesignPatterns
 
             var prototypePatternSimulation = new PrototypePatternSimulation();
             prototypePatternSimulation.Simulate();
+
+            /*****************************************************
+             * Dependecny Injection pattern simulation bolck
+             * ***************************************************/
+
+            var dependencyInjectionPatternSimulation = new DependencyInjectionPatternSimulation();
+            dependencyInjectionPatternSimulation.Simulate();
         }
     }
 }

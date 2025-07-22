@@ -3,6 +3,7 @@ using DesignPatterns.BuilderPattern;
 using DesignPatterns.DependencyInjectionPattern;
 using DesignPatterns.Factory;
 using DesignPatterns.LazyInitializationPattern;
+using DesignPatterns.MultitonPattern;
 using DesignPatterns.ObjectPoolPattern;
 using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
@@ -77,6 +78,13 @@ namespace DesignPatterns
 
             var objectPoolPatternSimulation = new ObjectPoolPatternSimulation();
             objectPoolPatternSimulation.Simulate();
+
+            /*****************************************************
+             * Multiton pattern simulation bolck
+             * ***************************************************/
+
+            var multitonPatternSimulation = new MultitonPatternSimulation();
+            multitonPatternSimulation.Simulate();
         }
     }
 }

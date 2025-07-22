@@ -3,6 +3,7 @@ using DesignPatterns.BuilderPattern;
 using DesignPatterns.DependencyInjectionPattern;
 using DesignPatterns.Factory;
 using DesignPatterns.LazyInitializationPattern;
+using DesignPatterns.ObjectPoolPattern;
 using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
 
@@ -69,6 +70,13 @@ namespace DesignPatterns
 
             var lazyInitializationSimulation = new LazyInitializationSimulation();
             lazyInitializationSimulation.Simulate();
+
+            /*****************************************************
+             * Object Pool pattern simulation bolck
+             * ***************************************************/
+
+            var objectPoolPatternSimulation = new ObjectPoolPatternSimulation();
+            objectPoolPatternSimulation.Simulate();
         }
     }
 }

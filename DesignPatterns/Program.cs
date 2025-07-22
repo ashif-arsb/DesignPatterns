@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.AbstractFactoryPattern;
+using DesignPatterns.BuilderPattern;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
 
@@ -36,6 +37,14 @@ namespace DesignPatterns
 
             var abstractFactory = new AbstractFactoryPatternSimulation();
             abstractFactory.Simulate();
+
+            /*****************************************************
+             * Builder simulation bolck
+             * ***************************************************/
+
+            var builderPatternSimulation = new BuilderPatternSimulation();
+            builderPatternSimulation.BuildCustomComputer();
+            builderPatternSimulation.BuildComputersByDirector();
         }
     }
 }

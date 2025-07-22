@@ -30,11 +30,12 @@ namespace DesignPatterns.Factory
         public void Simulate()
         {
             Console.WriteLine($"Running application on {_factory.GetType().Name.Replace("ButtonFactory", "")}...");
-            //IButton myButton = _factory.CreateButton();
-            //myButton.Render();
-            //myButton.Click();
 
-            _factory.CreateAndInteractWithButton();
+            //_factory.CreateAndInteractWithButton();
+
+            IButton button = _factory.CreateButton();
+            button.Render();
+            button.Click();
         }
     }
 }

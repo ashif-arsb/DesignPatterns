@@ -1,0 +1,7 @@
+﻿namespace DesignPatterns.AbstractFactoryPattern.AbstractProducts
+{
+    public interface ICarnivore
+    {
+        void Eat(IHerbivore herbivore);
+    }
+}

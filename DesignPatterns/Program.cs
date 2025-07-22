@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Factory;
+﻿using DesignPatterns.AbstractFactoryPattern;
+using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
 
 namespace DesignPatterns
@@ -12,10 +13,10 @@ namespace DesignPatterns
              * Singleton simulation bolck
              * ***************************************************/
 
-            //var singletonSimulation = new SingletonSimulation();
-            //singletonSimulation.SimulateDoubleChedkedLockingObject();
-            //singletonSimulation.SimulateEgarInitialization();
-            //singletonSimulation.SimulateLazyInitialization();
+            var singletonSimulation = new SingletonSimulation();
+            singletonSimulation.SimulateDoubleChedkedLockingObject();
+            singletonSimulation.SimulateEgarInitialization();
+            singletonSimulation.SimulateLazyInitialization();
 
             /*****************************************************
              * Factory simulation bolck
@@ -28,6 +29,13 @@ namespace DesignPatterns
             windowsButtonSimulation.Simulate();
             macButtonSimulation.Simulate();
             linuxButtonSimulation.Simulate();
+
+            /*****************************************************
+             * Abstract Factory simulation bolck
+             * ***************************************************/
+
+            var abstractFactory = new AbstractFactoryPatternSimulation();
+            abstractFactory.Simulate();
         }
     }
 }

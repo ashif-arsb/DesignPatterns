@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.AbstractFactoryPattern;
 using DesignPatterns.BuilderPattern;
 using DesignPatterns.Factory;
+using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
 
 namespace DesignPatterns
@@ -45,6 +46,13 @@ namespace DesignPatterns
             var builderPatternSimulation = new BuilderPatternSimulation();
             builderPatternSimulation.BuildCustomComputer();
             builderPatternSimulation.BuildComputersByDirector();
+
+            /*****************************************************
+             * Protype pattern simulation bolck
+             * ***************************************************/
+
+            var prototypePatternSimulation = new PrototypePatternSimulation();
+            prototypePatternSimulation.Simulate();
         }
     }
 }

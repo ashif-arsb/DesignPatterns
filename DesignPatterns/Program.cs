@@ -2,6 +2,7 @@
 using DesignPatterns.BuilderPattern;
 using DesignPatterns.DependencyInjectionPattern;
 using DesignPatterns.Factory;
+using DesignPatterns.LazyInitializationPattern;
 using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
 
@@ -61,6 +62,13 @@ namespace DesignPatterns
 
             var dependencyInjectionPatternSimulation = new DependencyInjectionPatternSimulation();
             dependencyInjectionPatternSimulation.Simulate();
+
+            /*****************************************************
+             * Lazy Initialization pattern simulation bolck
+             * ***************************************************/
+
+            var lazyInitializationSimulation = new LazyInitializationSimulation();
+            lazyInitializationSimulation.Simulate();
         }
     }
 }

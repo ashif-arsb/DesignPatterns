@@ -12,6 +12,7 @@ using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Proxy;
 
 namespace DesignPatterns
 {
@@ -20,7 +21,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Facade.ToString());
+            SimulateDesignPattern(DesignPattern.Proxy.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -137,6 +138,11 @@ namespace DesignPatterns
                 case "facade":
                     var facadePatternSimulation = new FacadePatternSimulation();
                     facadePatternSimulation.Simulate();
+                    return;
+
+                case "proxy":
+                    var proxyPatternSimulation = new ProxyPatternSimulation();
+                    proxyPatternSimulation.Simulate();
                     return;
 
                 default:

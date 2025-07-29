@@ -8,6 +8,7 @@ using DesignPatterns.ObjectPoolPattern;
 using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Bridge;
 
 namespace DesignPatterns
 {
@@ -16,11 +17,10 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            //SimulateCreationalPattern(DesignPattern.Singleton.ToString());
-            SimulateStructuralPattern(DesignPattern.Adapter.ToString());
+            SimulateDesignPattern(DesignPattern.Bridge.ToString());
         }
 
-        static void SimulateCreationalPattern(string patternName)
+        static void SimulateDesignPattern(string patternName)
         {
             if (string.IsNullOrEmpty(patternName))
                 patternName = string.Empty;
@@ -110,23 +110,15 @@ namespace DesignPatterns
                     var multitonPatternSimulation = new MultitonPatternSimulation();
                     multitonPatternSimulation.Simulate();
                     break;
-                default:
-                    return;
-            }
-        }
 
-        static void SimulateStructuralPattern(string patternName)
-        {
-            if (string.IsNullOrEmpty(patternName))
-                patternName = string.Empty;
-            else
-                patternName = patternName.ToLower();
-
-            switch (patternName)
-            {
                 case "adapter":
                     var adapterPatternSimulation = new AdapterPatternSimulation();
                     adapterPatternSimulation.Simulate();
+                    return;
+
+                case "bridge":
+                    var bridgePatternSimulation = new BridgePatternSimulation();
+                    bridgePatternSimulation.Simulate();
                     return;
 
                 default:

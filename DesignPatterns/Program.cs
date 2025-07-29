@@ -9,6 +9,8 @@ using DesignPatterns.PrototypePattern;
 using DesignPatterns.Singleton;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Composite;
+using DesignPatterns.Structural.Decorator;
 
 namespace DesignPatterns
 {
@@ -17,7 +19,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Bridge.ToString());
+            SimulateDesignPattern(DesignPattern.Decorator.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -119,6 +121,16 @@ namespace DesignPatterns
                 case "bridge":
                     var bridgePatternSimulation = new BridgePatternSimulation();
                     bridgePatternSimulation.Simulate();
+                    return;
+
+                case "composite":
+                    var compositePatternSimulation = new CompositePatternSimulation();
+                    compositePatternSimulation.Simulate();
+                    return;
+
+                case "decorator":
+                    var decoratorPatternSimulation = new DecoratorPatternSimulation();
+                    decoratorPatternSimulation.Simulate();
                     return;
 
                 default:

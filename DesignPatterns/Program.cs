@@ -12,6 +12,7 @@ using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Flyweight;
 using DesignPatterns.Structural.Proxy;
 
 namespace DesignPatterns
@@ -21,7 +22,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Proxy.ToString());
+            SimulateDesignPattern(DesignPattern.Flyweight.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -33,9 +34,6 @@ namespace DesignPatterns
 
             switch (patternName)
             {
-                /*****************************************************
-                * Singleton simulation bolck
-                * ***************************************************/
                 case "singleton":
                     var singletonSimulation = new SingletonSimulation();
                     singletonSimulation.SimulateDoubleChedkedLockingObject();
@@ -43,9 +41,6 @@ namespace DesignPatterns
                     singletonSimulation.SimulateLazyInitialization();
                     break;
 
-                /*****************************************************
-                 * Factory simulation bolck
-                 * ***************************************************/
                 case "factory":
                     var windowsButtonSimulation = new FactorySimulation("Windows");
                     var macButtonSimulation = new FactorySimulation("MacOS");
@@ -56,60 +51,39 @@ namespace DesignPatterns
                     linuxButtonSimulation.Simulate();
                     break;
 
-                /*****************************************************
-                 * Abstract Factory simulation bolck
-                 * ***************************************************/
                 case "abstractfactory":
                     var abstractFactory = new AbstractFactoryPatternSimulation();
                     abstractFactory.Simulate();
                     break;
 
-                /*****************************************************
-                 * Builder simulation bolck
-                 * ***************************************************/
                 case "builder":
                     var builderPatternSimulation = new BuilderPatternSimulation();
                     builderPatternSimulation.BuildCustomComputer();
                     builderPatternSimulation.BuildComputersByDirector();
                     break;
 
-                /*****************************************************
-                 * Protype pattern simulation bolck
-                 * ***************************************************/
                 case "prototype":
                     var prototypePatternSimulation = new PrototypePatternSimulation();
                     prototypePatternSimulation.Simulate();
                     break;
 
-                /*****************************************************
-                 * Dependecny Injection pattern simulation bolck
-                 * ***************************************************/
                 case "dependencyinjection":
                 case "di":
                     var dependencyInjectionPatternSimulation = new DependencyInjectionPatternSimulation();
                     dependencyInjectionPatternSimulation.Simulate();
                     break;
 
-                /*****************************************************
-                 * Lazy Initialization pattern simulation bolck
-                 * ***************************************************/
                 case "lazy":
                 case "lazyinitialization":
                     var lazyInitializationSimulation = new LazyInitializationSimulation();
                     lazyInitializationSimulation.Simulate();
                     break;
 
-                /*****************************************************
-                 * Object Pool pattern simulation bolck
-                 * ***************************************************/
                 case "objectpool":
                     var objectPoolPatternSimulation = new ObjectPoolPatternSimulation();
                     objectPoolPatternSimulation.Simulate();
                     break;
 
-                /*****************************************************
-                 * Multiton pattern simulation bolck
-                 * ***************************************************/
                 case "multiton":
                     var multitonPatternSimulation = new MultitonPatternSimulation();
                     multitonPatternSimulation.Simulate();
@@ -143,6 +117,11 @@ namespace DesignPatterns
                 case "proxy":
                     var proxyPatternSimulation = new ProxyPatternSimulation();
                     proxyPatternSimulation.Simulate();
+                    return;
+
+                case "flyweight":
+                    var flyweightPatternSimulation = new FlyweightPatternSimulation();
+                    flyweightPatternSimulation.Simulate();
                     return;
 
                 default:

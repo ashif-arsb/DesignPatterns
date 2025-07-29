@@ -11,6 +11,7 @@ using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Facade;
 
 namespace DesignPatterns
 {
@@ -19,7 +20,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Decorator.ToString());
+            SimulateDesignPattern(DesignPattern.Facade.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -131,6 +132,11 @@ namespace DesignPatterns
                 case "decorator":
                     var decoratorPatternSimulation = new DecoratorPatternSimulation();
                     decoratorPatternSimulation.Simulate();
+                    return;
+
+                case "facade":
+                    var facadePatternSimulation = new FacadePatternSimulation();
+                    facadePatternSimulation.Simulate();
                     return;
 
                 default:

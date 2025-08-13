@@ -2,6 +2,7 @@
 using DesignPatterns.Behavioral.Observer;
 using DesignPatterns.Behavioral.State.WithoutPattern;
 using DesignPatterns.Behavioral.State.WithPattern;
+using DesignPatterns.Behavioral.Strategy;
 using DesignPatterns.Creational.AbstractFactoryPattern;
 using DesignPatterns.Creational.BuilderPattern;
 using DesignPatterns.Creational.DependencyInjectionPattern;
@@ -26,7 +27,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Observer.ToString());
+            SimulateDesignPattern(DesignPattern.Strategy.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -148,6 +149,11 @@ namespace DesignPatterns
                     observer.Simulate();
                     return;
 
+                case "strategy":
+                    var startegy = new StrategyPatternSimulation();
+                    startegy.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -179,6 +185,7 @@ namespace DesignPatterns
         // Behavioral patterns
         StateMono, State,
         CoR,
-        Observer
+        Observer,
+        Strategy
     }
 }

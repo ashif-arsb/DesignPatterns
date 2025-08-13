@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.Behavioral.Command;
 using DesignPatterns.Behavioral.CoR;
+using DesignPatterns.Behavioral.Memento;
 using DesignPatterns.Behavioral.Observer;
 using DesignPatterns.Behavioral.State.WithoutPattern;
 using DesignPatterns.Behavioral.State.WithPattern;
@@ -29,7 +30,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Command.ToString());
+            SimulateDesignPattern(DesignPattern.Memento.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -166,6 +167,11 @@ namespace DesignPatterns
                     command.Simulate();
                     return;
 
+                case "memento":
+                    var memento = new MementoPatternSimulation();
+                    memento.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -200,6 +206,7 @@ namespace DesignPatterns
         Observer,
         Strategy,
         TemplateMethod,
-        Command
+        Command,
+        Memento
     }
 }

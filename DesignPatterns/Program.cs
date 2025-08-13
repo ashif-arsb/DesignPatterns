@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Behavioral.State.WithoutPattern;
+﻿using DesignPatterns.Behavioral.CoR;
+using DesignPatterns.Behavioral.State.WithoutPattern;
 using DesignPatterns.Behavioral.State.WithPattern;
 using DesignPatterns.Creational.AbstractFactoryPattern;
 using DesignPatterns.Creational.BuilderPattern;
@@ -24,7 +25,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.State.ToString());
+            SimulateDesignPattern(DesignPattern.CoR.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -136,6 +137,11 @@ namespace DesignPatterns
                     gameStatePattern.Run();
                     return;
 
+                case "cor":
+                    var cor = new CoRPatternSimulation();
+                    cor.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -165,6 +171,7 @@ namespace DesignPatterns
         Flyweight,
 
         // Behavioral patterns
-        StateMono, State
+        StateMono, State,
+        CoR
     }
 }

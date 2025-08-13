@@ -1,5 +1,5 @@
-﻿using DesignPatterns.AbstractFactoryPattern.ConcreteFactories;
-using DesignPatterns.Creational.AbstractFactoryPattern.AbstractFactory;
+﻿using DesignPatterns.Creational.AbstractFactoryPattern.AbstractFactory;
+using DesignPatterns.Creational.AbstractFactoryPattern.ConcreteFactories;
 
 namespace DesignPatterns.Creational.AbstractFactoryPattern
 {

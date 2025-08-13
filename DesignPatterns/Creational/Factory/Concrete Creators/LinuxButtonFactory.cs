@@ -1,6 +1,6 @@
-﻿using DesignPatterns.Creational.Factory.Creators;
+﻿using DesignPatterns.Creational.Factory.ConcreteProducts;
+using DesignPatterns.Creational.Factory.Creators;
 using DesignPatterns.Creational.Factory.Products;
-using DesignPatterns.Factory.ConcreteProducts;
 
 namespace DesignPatterns.Factory.Concrete_Creators
 {

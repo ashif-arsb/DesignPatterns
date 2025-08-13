@@ -1,4 +1,6 @@
-﻿using DesignPatterns.Creational.AbstractFactoryPattern;
+﻿using DesignPatterns.Behavioral.State.WithoutPattern;
+using DesignPatterns.Behavioral.State.WithPattern;
+using DesignPatterns.Creational.AbstractFactoryPattern;
 using DesignPatterns.Creational.BuilderPattern;
 using DesignPatterns.Creational.DependencyInjectionPattern;
 using DesignPatterns.Creational.Factory;
@@ -22,7 +24,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Flyweight.ToString());
+            SimulateDesignPattern(DesignPattern.State.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -124,6 +126,16 @@ namespace DesignPatterns
                     flyweightPatternSimulation.Simulate();
                     return;
 
+                case "statemono":
+                    var game = new GameSimulationMonolithic();
+                    game.Run();
+                    return;
+
+                case "state":
+                    var gameStatePattern = new GameSimulationStatePattern();
+                    gameStatePattern.Run();
+                    return;
+
                 default:
                     return;
             }
@@ -132,7 +144,7 @@ namespace DesignPatterns
 
     public enum DesignPattern
     {
-        //Creational patterns
+        // Creational patterns
         DependencyInjection,
         LazyInitialization,
         Singleton,
@@ -143,13 +155,16 @@ namespace DesignPatterns
         ObjectPool,
         Multiton,
 
-        //Structural patterns
+        // Structural patterns
         Adapter,
         Bridge,
         Composite,
         Decorator,
         Facade,
         Proxy,
-        Flyweight
+        Flyweight,
+
+        // Behavioral patterns
+        StateMono, State
     }
 }

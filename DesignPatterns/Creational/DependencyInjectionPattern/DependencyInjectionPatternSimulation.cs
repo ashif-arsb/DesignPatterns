@@ -1,6 +1,4 @@
-﻿using DesignPatterns.DependencyInjectionPattern;
-
-namespace DesignPatterns.Creational.DependencyInjectionPattern
+﻿namespace DesignPatterns.Creational.DependencyInjectionPattern
 {
     public class DependencyInjectionPatternSimulation
     {

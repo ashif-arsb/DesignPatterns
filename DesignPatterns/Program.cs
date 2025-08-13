@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Behavioral.CoR;
+﻿using DesignPatterns.Behavioral.Command;
+using DesignPatterns.Behavioral.CoR;
 using DesignPatterns.Behavioral.Observer;
 using DesignPatterns.Behavioral.State.WithoutPattern;
 using DesignPatterns.Behavioral.State.WithPattern;
@@ -28,7 +29,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.TemplateMethod.ToString());
+            SimulateDesignPattern(DesignPattern.Command.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -160,6 +161,11 @@ namespace DesignPatterns
                     tm.Simulate();
                     return;
 
+                case "command":
+                    var command = new CommandPatternSimulation();
+                    command.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -193,6 +199,7 @@ namespace DesignPatterns
         CoR,
         Observer,
         Strategy,
-        TemplateMethod
+        TemplateMethod,
+        Command
     }
 }

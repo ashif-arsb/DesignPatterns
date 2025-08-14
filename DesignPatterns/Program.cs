@@ -6,6 +6,8 @@ using DesignPatterns.Behavioral.State.WithoutPattern;
 using DesignPatterns.Behavioral.State.WithPattern;
 using DesignPatterns.Behavioral.Strategy;
 using DesignPatterns.Behavioral.TemplateMethod;
+using DesignPatterns.Behavioral.Visitor;
+using DesignPatterns.Behavioral.Visitor.Application;
 using DesignPatterns.Creational.AbstractFactoryPattern;
 using DesignPatterns.Creational.BuilderPattern;
 using DesignPatterns.Creational.DependencyInjectionPattern;
@@ -30,7 +32,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Memento.ToString());
+            SimulateDesignPattern(DesignPattern.VisitorApp.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -172,6 +174,16 @@ namespace DesignPatterns
                     memento.Simulate();
                     return;
 
+                case "visitor":
+                    var visitor = new VisitorPatternSimulation();
+                    visitor.Simulate();
+                    return;
+
+                case "visitorapp":
+                    var visitorApp = new AstApplication();
+                    visitorApp.Run();
+                    return;
+
                 default:
                     return;
             }
@@ -207,6 +219,8 @@ namespace DesignPatterns
         Strategy,
         TemplateMethod,
         Command,
-        Memento
+        Memento,
+        Visitor,
+        VisitorApp
     }
 }

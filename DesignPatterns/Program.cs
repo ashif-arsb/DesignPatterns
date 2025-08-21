@@ -1,5 +1,7 @@
 ﻿using DesignPatterns.Behavioral.Command;
 using DesignPatterns.Behavioral.CoR;
+using DesignPatterns.Behavioral.Interpreter;
+using DesignPatterns.Behavioral.Mediator;
 using DesignPatterns.Behavioral.Memento;
 using DesignPatterns.Behavioral.Observer;
 using DesignPatterns.Behavioral.State.WithoutPattern;
@@ -32,7 +34,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.VisitorApp.ToString());
+            SimulateDesignPattern(DesignPattern.Strategy.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -184,6 +186,16 @@ namespace DesignPatterns
                     visitorApp.Run();
                     return;
 
+                case "interpreter":
+                    var interpreter = new InterpreterPatternSimulation();
+                    interpreter.Simulate();
+                    return;
+
+                case "mediator":
+                    var mediator = new MediatorPatternSimulation();
+                    mediator.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -221,6 +233,8 @@ namespace DesignPatterns
         Command,
         Memento,
         Visitor,
-        VisitorApp
+        VisitorApp,
+        Interpreter,
+        Mediator
     }
 }

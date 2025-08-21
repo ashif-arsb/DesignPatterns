@@ -2,9 +2,11 @@
 {
     public class Tree
     {
+        // Extrinsic property
         private readonly int _x;
         private readonly int _y;
 
+        // Intrinsic property
         private readonly ITreeType _type;
 
         public Tree(int x, int y, ITreeType type)

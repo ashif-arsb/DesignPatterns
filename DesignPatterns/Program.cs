@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Behavioral.Command;
 using DesignPatterns.Behavioral.CoR;
 using DesignPatterns.Behavioral.Interpreter;
+using DesignPatterns.Behavioral.Iterator;
 using DesignPatterns.Behavioral.Mediator;
 using DesignPatterns.Behavioral.Memento;
 using DesignPatterns.Behavioral.Observer;
@@ -34,7 +35,7 @@ namespace DesignPatterns
         protected Program() { }
         static void Main(string[] args)
         {
-            SimulateDesignPattern(DesignPattern.Strategy.ToString());
+            SimulateDesignPattern(DesignPattern.Iterator.ToString());
         }
 
         static void SimulateDesignPattern(string patternName)
@@ -196,6 +197,11 @@ namespace DesignPatterns
                     mediator.Simulate();
                     return;
 
+                case "iterator":
+                    var iterator = new IteratorPatternSimulation();
+                    iterator.Simulate();
+                    return;
+
                 default:
                     return;
             }
@@ -235,6 +241,7 @@ namespace DesignPatterns
         Visitor,
         VisitorApp,
         Interpreter,
-        Mediator
+        Mediator,
+        Iterator
     }
 }

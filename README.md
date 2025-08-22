@@ -20,3 +20,18 @@ The common software design patterns are simulated
 * Facade
 * Proxy
 * Flyweight
+
+## Behavioral Design Patterns
+* State,
+* CoR
+* Observer
+* Strategy
+* TemplateMethod
+* Command
+* Memento
+* Visitor
+* VisitorApp
+* Interpreter
+* Mediator
+* Iterator
+
